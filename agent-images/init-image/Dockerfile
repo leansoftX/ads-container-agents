@@ -20,4 +20,4 @@ RUN wget -q https://storage.googleapis.com/kubernetes-release/release/${KUBE_LAT
     && chmod g+rwx /root \
     && mkdir /config \
     && chmod g+rwx /config \
-    && helm repo add zeiss https://zeisscharts.blob.core.windows.net/on-demand-agents
+    && helm repo add leansoftx https://raw.githubusercontent.com/ups216/ads-container-agents/main/helm-charts/_package/

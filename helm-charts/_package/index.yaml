@@ -2,7 +2,16 @@ apiVersion: v1
 entries:
   ads-agent-init:
   - apiVersion: v2
-    created: "2021-05-12T04:25:22.210170055Z"
+    created: "2021-05-12T08:23:10.494427519Z"
+    description: A Helm chart for Azure DevOps On Demand Agents - INIT agent
+    digest: 615a3f04e0cecce9b0cf9bf5ab02daff19cf0558a03581b4a0a2f94ed83de5cb
+    name: ads-agent-init
+    type: application
+    urls:
+    - ads-agent-init-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    created: "2021-05-12T08:23:10.494156123Z"
     description: A Helm chart for Azure DevOps On Demand Agents - INIT agent
     digest: f0380f001fa9d06e780ea8a46dbe6022a6639e510b052dc08e8bc9e42b5f1d47
     name: ads-agent-init
@@ -12,7 +21,16 @@ entries:
     version: 0.0.1
   ads-agent-on-demand:
   - apiVersion: v2
-    created: "2021-05-12T04:25:22.210438856Z"
+    created: "2021-05-12T08:23:10.494917213Z"
+    description: A Helm chart for Azure DevOps On Demand Agents - Demand agent
+    digest: c87e0a24c72c6c371c7258089ef742b9ef42da3beb5819882a7a75c8acba4ac7
+    name: ads-agent-on-demand
+    type: application
+    urls:
+    - ads-agent-on-demand-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    created: "2021-05-12T08:23:10.494630516Z"
     description: A Helm chart for Azure DevOps On Demand Agents - Demand agent
     digest: 08347405cd6bffd5e44acb31edc2483179311c7b5569c51df76fc3b4ced83916
     name: ads-agent-on-demand
@@ -20,4 +38,4 @@ entries:
     urls:
     - ads-agent-on-demand-0.0.1.tgz
     version: 0.0.1
-generated: "2021-05-12T04:25:22.209523353Z"
+generated: "2021-05-12T08:23:10.49361973Z"
