@@ -60,7 +60,7 @@ export PAT_TOKEN=$(echo -n 'YOUR_ADS_PAT' | base64)
 helm install --namespace ads-agents --set adsToken=${PAT_TOKEN} ads-agent-init  .
 
 ## install from hosted helm chart
-helm repo add leansoftx https://raw.githubusercontent.com/ups216/ads-container-agents/main/helm-charts/_package/
+helm repo add leansoftx https://raw.githubusercontent.com/leansoftX/ads-container-agents/main/helm-charts/_package/
 helm repo update
 helm install --namespace ads-agents --set adsToken=${PAT_TOKEN} ads-agent-init leansoftx/ads-agent-init 
 
@@ -78,7 +78,7 @@ cd helm-charts/src/ads-agent-on-demand
 ## install from local
 helm install --namespace ads-agents ads-agent-on-demand  .
 ## install from hosted
-helm repo add leansoftx https://raw.githubusercontent.com/ups216/ads-container-agents/main/helm-charts/_package/
+helm repo add leansoftx https://raw.githubusercontent.com/leansoftX/ads-container-agents/main/helm-charts/_package/
 helm repo update
 helm install --namespace ads-agents ads-agent-on-demand leansoftx/ads-agent-on-demand
 ```
