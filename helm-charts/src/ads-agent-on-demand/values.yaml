@@ -1,0 +1,5 @@
+namespace: ads-agents
+agent:
+  repository: leansoftx/ads-agent-on-demand
+  type: nodejs
+  pullPolicy: Always

@@ -1,0 +1,11 @@
+replicas: 1
+
+namespace: ads-agents
+env:
+  adsUrl: https://dev.azure.com/demo-devops101
+  adsPool: ads-agents
+
+image:
+  repository: leansoftx/ads-agent-init
+  tag: latest
+  pullPolicy: Always

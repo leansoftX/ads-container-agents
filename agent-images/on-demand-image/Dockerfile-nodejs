@@ -1,0 +1,6 @@
+# Azure DevOps baseimage (../base-image/Dockerfile)
+# More info: https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/docker?view=azure-devops#create-and-build-the-dockerfile-1
+FROM leansoftx/ads-agent-base:latest
+
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
+    apt-get install -y nodejs
