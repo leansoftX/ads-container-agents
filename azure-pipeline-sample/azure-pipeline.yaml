@@ -1,0 +1,51 @@
+atrigger:
+  - main
+  
+variables:
+  agentPool: 'ads-agents'
+  agentType: 'nodejs'
+
+stages:
+
+- stage: SpinUpAgent
+  pool:
+      name: $(agentPool)
+      demands:
+      - category -equals init-agent
+  jobs: 
+  - job: SpinupAgent
+    displayName: Spining up Agent
+
+    steps:
+    - checkout: none
+    - script: |
+        helm repo update
+        helm install --namespace $(agentPool) --wait $(agentType)-$(Build.BuildId) --set agent.type=$(agentType) leansoftx/ads-agent-on-demand
+      displayName: "Create an Agent- HELM"
+    
+- stage: Build
+  pool:
+      name: $(agentPool)
+      demands:
+      - Agent.Name -equals $(agentType)-$(Build.BuildId)
+  jobs:
+  - job: NodeJSBuild
+    steps:
+    - script: |
+        npm run install
+        npm run build
+      displayName: 'npm install and build'
+
+
+- stage: DeleteAgent
+  pool:
+      name: $(agentPool)
+      demands:
+      - category -equals init-agent
+  jobs:
+    - job: NodeJSBuild
+      steps:
+      - checkout: none
+      - script: |
+          helm uninstall --namespace $(agentPool) $(agentType)-$(Build.BuildId)
+        displayName: "Delete an Agent - HELM"
