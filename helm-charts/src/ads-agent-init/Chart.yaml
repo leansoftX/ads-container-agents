@@ -2,4 +2,4 @@ apiVersion: v2
 name: ads-agent-init
 description: A Helm chart for Azure DevOps On Demand Agents - INIT agent
 type: application
-version: 0.0.2
+version: 0.0.3

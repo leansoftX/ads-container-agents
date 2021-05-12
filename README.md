@@ -27,7 +27,10 @@ docker push leansoftx/ads-agent-on-demand:dotnet
 ## Prepare Helm Charts
 
 ```shell
-
+/helm-charts/src$ helm package ads-agent-init
+/helm-charts/src$ helm package ads-agent-on-demand
+/helm-charts/src$ mv *.tgz ../_package/
+/helm-charts/_package$ helm repo index .
 ```
 
 ## Deploy Init Agents

@@ -43,6 +43,6 @@ spec:
             command:
             - /bin/sh
             - -c
-            - "cat /azp/agent/_diag/Agent_*.log | grep \"Listening for Jobs\""
+            - "cat /azp/_diag/Agent_*.log | grep \"Listening for Jobs\""
           initialDelaySeconds: 15
           periodSeconds: 5
