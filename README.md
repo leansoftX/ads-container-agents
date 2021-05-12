@@ -5,10 +5,13 @@ Azure DevOps on demand agents will help you to leverage Kubernetes as your build
 ## Content
 
 This repo provides the following resources
-
 - agent-images: Dockerfiles to create the docker images for use in your cluster
 - helm-charts: Helm charts for automating the pod orchestration
 - azure-pipeline-sample: a pre-build azure-pipeline.yaml to help you get started
+
+online resource
+- hosted helm charts: https://raw.githubusercontent.com/leansoftX/ads-container-agents/main/helm-charts/_package/
+- docker hub images: https://hub.docker.com/orgs/leansoftx
 
 ## Build Agents Images
 
